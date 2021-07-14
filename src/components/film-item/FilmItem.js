@@ -16,7 +16,7 @@ export const FilmItem = (props)=>{
     // vote_average: 8.2
     // vote_count: 2031
 
-    const {original_title, overview, release_date, vote_average, vote_count, poster_path } = props;
+    const {original_title, overview, release_date, vote_average, vote_count, poster_path, movieGenresList } = props;
 
     return (
         <div className={styles.filmItem}>
@@ -25,6 +25,7 @@ export const FilmItem = (props)=>{
            </div>
             <div>
                 <h2>{original_title}</h2>
+                <h3>{movieGenresList.map(({name, id})=><span key={id}>{name}' '</span>)}</h3>
                 <span>Reating:{vote_average} (total vote:{vote_count})</span>
                 <p>{overview}</p>
                 <span>Release date:{release_date}</span>
