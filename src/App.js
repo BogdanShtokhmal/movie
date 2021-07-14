@@ -9,9 +9,7 @@ import {Home} from "./pages";
 
 
 function App() {
-    React.useEffect(() =>{
-        moviesServices.getMovies().then(console.log)
-    },[])
+
   return (
       <BaseLayout>
           <Home/>
